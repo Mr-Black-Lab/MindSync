@@ -1,5 +1,5 @@
-const CACHE = 'planner-0abc36873a';
-const FILES = ["./","assets/Expenses-d93ceec7.js","assets/Habits-ccc80ca2.js","assets/index-04481dc9.js","assets/index-9b4456f1.css","assets/Meals-033c42ec.js","assets/Notes-54adfa01.js","assets/Tasks-9f61bcfd.js","assets/vendor-date-e6735cc5.js","assets/vendor-icons-224ac3e2.js","assets/vendor-motion-c707c8ba.js","assets/vendor-query-d1926a67.js","assets/vendor-react-d8b80929.js","favicon.svg","icons/icon-180.png","icons/icon-192.png","icons/icon-512.png","icons.svg","index.html","manifest.webmanifest"];
+const CACHE = 'planner-e7f4198ef8';
+const FILES = ["./","assets/Expenses-6e5127c7.js","assets/Habits-73c5decf.js","assets/index-1dcc9f64.js","assets/index-d7e3f600.css","assets/Meals-10a0bc48.js","assets/Notes-8197dfdd.js","assets/Tasks-1d1cd522.js","assets/vendor-date-e6735cc5.js","assets/vendor-icons-224ac3e2.js","assets/vendor-motion-c707c8ba.js","assets/vendor-query-d1926a67.js","assets/vendor-react-d8b80929.js","favicon.svg","icons/icon-180.png","icons/icon-192.png","icons/icon-512.png","icons.svg","index.html","manifest.webmanifest"];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
